@@ -20,10 +20,10 @@ export default function ProfileCard() {
         {/* Gear decoration */}
         <svg className="absolute right-8 top-4 w-24 h-24 text-white/10" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m7.43-2.92c.04-.3.07-.62.07-.95s-.03-.66-.07-.97l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-[...]
-        </svg>
+          </svg>
         <svg className="absolute left-10 bottom-2 w-16 h-16 text-white/10" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 15.5A3.5 3.5 0 018.5 12 3.5 3.5 0 0112 8.5a3.5 3.5 0 013.5 3.5 3.5 3.5 0 01-3.5 3.5m7.43-2.92c.04-.3.07-.62.07-.95s-.03-.66-.07-.97l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-[...]
-        </svg>
+          </svg>
       </div>
 
       <div className="px-5 pb-5">
@@ -43,6 +43,8 @@ export default function ProfileCard() {
           {/* Action buttons */}
           <div className="flex gap-2 items-center pb-1">
             <button
+              id="connectBtn"
+              name="connect"
               onClick={() => setConnected(!connected)}
               className={`text-sm font-semibold px-4 py-1.5 rounded-full border-2 transition-all ${
                 connected
@@ -53,6 +55,8 @@ export default function ProfileCard() {
               {connected ? '✓ Conectado' : '+ Conectar'}
             </button>
             <button
+              id="followBtn"
+              name="follow"
               onClick={() => setFollowing(!following)}
               className={`text-sm font-semibold px-4 py-1.5 rounded-full border-2 transition-all ${
                 following
@@ -74,7 +78,7 @@ export default function ProfileCard() {
             {/* Verified badge */}
             <svg className="w-5 h-5 text-[#0A66C2] flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-.529 3.78 3.745 3.745 0 01-3.78.529A3.745 3.745 0 0112 21a3.745 3.745 0 01-3.098-1.623 3.745 3.[...]
-            </svg>
+              </svg>
           </div>
           <p className="text-gray-700 text-base mt-1 font-medium">
             Padre de la Administración Científica · Ingeniero Industrial · Consultor Empresarial
@@ -119,7 +123,7 @@ export default function ProfileCard() {
             >
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.3[...]
-              </svg>
+                </svg>
               {tag}
             </span>
           ))}
@@ -129,7 +133,7 @@ export default function ProfileCard() {
         <div className="mt-3 border border-green-400 bg-green-50 rounded-lg px-4 py-2.5 flex items-start gap-2">
           <svg className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.[...]
-            </path>
+              </path>
           </svg>
           <div>
             <p className="text-green-800 text-xs font-semibold">Disponible para consultoría</p>
